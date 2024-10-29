@@ -26,6 +26,7 @@ function startSimulation() {
       console.log(`Generated data for ${sensor}:`, data);
        
     });
+    console.log("Current sensor data:", JSON.stringify(sensorData, null, 2));
   }, 30000);
 }
 
@@ -43,4 +44,4 @@ function addSensorData(sensorId, data) {
   sensorData[sensorId].history.push(data);
 }
 
-module.exports = { startSimulation, getCurrentWeather, getHistoricalData, addSensorData };
+module.exports = { startSimulation, getCurrentWeather, getHistoricalData, addSensorData};
