@@ -22,6 +22,9 @@ const PORT = 5000;
 wserver.listen(PORT,()=>{
     console.log("Listening on port" + PORT)
 startSimulation();
+setInterval(() => {
+    console.log("Current sensor data:", JSON.stringify(sensorData, null, 2));
+}, 60000);
 }
 );
  

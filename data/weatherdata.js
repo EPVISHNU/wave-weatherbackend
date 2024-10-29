@@ -22,7 +22,9 @@ function startSimulation() {
       const data = generateRandomData();
       sensorData[sensor].current = data;
       sensorData[sensor].history.push(data);
-      if (sensorData[sensor].history.length > 100) sensorData[sensor].history.shift(); // 
+      if (sensorData[sensor].history.length > 100) sensorData[sensor].history.shift(); 
+      console.log(`Generated data for ${sensor}:`, data);
+       
     });
   }, 30000);
 }
